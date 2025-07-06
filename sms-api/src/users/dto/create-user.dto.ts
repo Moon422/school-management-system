@@ -12,5 +12,3 @@ export class CreateUserDto {
     @IsEnum(Role)
     role: Role;
 }
-
-export class UpdateUserDto extends PartialType(CreateUserDto) { }
