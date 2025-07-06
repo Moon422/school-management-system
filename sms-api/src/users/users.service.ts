@@ -22,6 +22,13 @@ export class UsersService {
         return this.prisma.user.findMany();
     }
 
+    async findAllPaged(pageIndex: number, pageSize: number) {
+        return this.prisma.user.findMany({
+            skip: pageIndex * pageSize,
+            take: pageSize
+        });
+    }
+
     async findOne(id: number) {
         const user = await this.prisma.user.findUnique({ where: { id } });
         if (!user) throw new NotFoundException('User not found');
