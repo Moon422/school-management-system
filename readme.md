@@ -128,7 +128,7 @@ Contributions are welcome! Fork the repo and submit a PR.
 
 ## 📜 License
 
-[MIT](LICENSE)
+[GPLv3](LICENSE)
 
 ## 🧩 Related Projects
 
