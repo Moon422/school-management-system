@@ -12,7 +12,6 @@ export class PrismaService extends PrismaClient
         await this.$disconnect();
     }
 
-    // Optional: helper to clear DB during testing
     async cleanDatabase() {
         if (process.env.NODE_ENV === 'test') {
             await this.grade.deleteMany();
